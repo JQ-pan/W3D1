@@ -74,9 +74,10 @@ class Array
         new_arr
     end
 
-    def my_join(string)
+    def my_join(string = "")
         new_str = ""
-        self.my_each {|ele|}
+        self.my_each.with_index {|ele| new_str += ele + string}
+
     end
 
 end
